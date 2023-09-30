@@ -3,7 +3,7 @@ permalink: Teaching
 title: "Teaching Assistant"
 author_profile: true
 redirect_from: 
-  - /teaching/
+  - /teaching
   - /teaching.html
 ---
 ## Teaching Assistant
