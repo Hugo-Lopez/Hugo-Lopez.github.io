@@ -13,4 +13,4 @@ redirect_from:
 - Fall 2022: Econometrics (undergraduate), for Derek Neal
 - Winter 2023: Human Capital, Markets, and the Family (graduate), for James Heckman
 - Spring 2023: Topics in Labor Economics (graduate), for Thibaut Lamadon
-- Fall 2023: Business Statistics (EMBA), for Jeffrey Russel
+- Fall 2023: Business Statistics (EMBA), for Jeffrey Russell
