@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-I'm an Economics Ph.D. Student at the University of Chicago 
+I'm an Economics Ph.D. Student at the University of Chicago.
