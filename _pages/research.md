@@ -15,5 +15,5 @@ redirect_from:
   *Submitted*
    
 - [**Labour Market Inequality and the Changing Lifecycle Profile of Male and Female Wages**](/files/BLZ.pdf) with [Richard Blundell](https://www.ucl.ac.uk/~uctp39a/) and [James P. Ziliak](https://sites.google.com/site/jamesziliak/Home?authuser=0).\
-  Revision Requested, *AEJ Applied*.
+  Revision Requested, *American Economic Journal: Applied Economics*.
 
