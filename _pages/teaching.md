@@ -1,6 +1,6 @@
 ---
 permalink: /teaching/
-title: "Teaching Assistant"
+title: "Teaching Experience"
 author_profile: true
 redirect_from: 
   - /teaching
@@ -8,7 +8,7 @@ redirect_from:
 ---
 {% include base_path %}
 
-## University of Chicago
+## University of Chicago (TA)
 - Spring 2024: Applied Microeconometrics (graduate), for Alex Torgovitsky
 - Fall 2023: Business Statistics (EMBA), for Jeffrey Russell
 - Spring 2023: Topics in Labor Economics (graduate), for Thibaut Lamadon
