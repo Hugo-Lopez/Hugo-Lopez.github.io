@@ -24,10 +24,6 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Runs before the page paints: marks that scripts work, so the Abstract buttons
-       take over. Without scripts every abstract is simply shown. -->
-  <script>document.documentElement.classList.add('js');</script>
-
   <link rel="stylesheet" href="assets/site.css">
 
   <script type="application/ld+json">
@@ -82,14 +78,13 @@
         My research is in labor economics and econometrics.
       </p>
 
-      <!-- To add a paper: copy one whole <article class="paper"> block, change its id,
-           and make the button's aria-controls match the id of its abstract.
-           Keep the two wrappers around the abstract text; they produce the sliding motion. -->
+      <!-- To add a paper: copy one whole <article class="paper"> block and change its
+           title, coauthors and links. Nothing else needs to match up. -->
 
       <section id="publications" aria-labelledby="h-publications">
         <h2 class="section-title" id="h-publications">Publications</h2>
 
-        <article class="paper" id="blz">
+        <article class="paper">
           <h3 class="paper-title">Labor Market Inequality and the Changing Life Cycle Profile of Male and Female Wages</h3>
           <p class="paper-authors">
             with <a href="https://www.homepages.ucl.ac.uk/~uctp39a/">Richard Blundell</a>
@@ -100,27 +95,13 @@
             <a href="https://www.aeaweb.org/articles?id=10.1257/app.20220454">Published version</a>
             <a href="files/BLZ.pdf">Working paper</a>
           </div>
-          <button class="toggle" type="button" aria-expanded="false" aria-controls="blz-abstract">Abstract</button>
-          <div class="abstract" id="blz-abstract">
-            <div class="abstract-body">
-              <p>
-                We estimate the full distribution of life cycle wages for cohorts of men and women in the
-                United States using a quantile selection model to account for systematic differences in
-                employment by gender and education group. Although common within-group time effects are
-                shown to be a key driver of labor market inequalities across gender, important additional
-                differences by birth cohort emerge with more recent cohorts of women delaying child rearing
-                and, by implication, the onset of child penalties in wages. These cross-cohort differences
-                help account for the stalling of progress in gender wage gaps over the past quarter century.
-              </p>
-            </div>
-          </div>
         </article>
       </section>
 
       <section id="working-papers" aria-labelledby="h-working-papers">
         <h2 class="section-title" id="h-working-papers">Working Papers</h2>
 
-        <article class="paper" id="klr">
+        <article class="paper">
           <h3 class="paper-title">Stochastic Treatment Choice with Empirical Welfare Updating</h3>
           <p class="paper-authors">
             with <a href="https://sites.google.com/brown.edu/torukitagawa">Toru Kitagawa</a>
@@ -128,26 +109,6 @@
           </p>
           <div class="paper-links">
             <a href="files/KLR.pdf">Working paper</a>
-          </div>
-          <button class="toggle" type="button" aria-expanded="false" aria-controls="klr-abstract">Abstract</button>
-          <div class="abstract" id="klr-abstract">
-            <div class="abstract-body">
-              <p>
-                This paper proposes a novel method to estimate individualised treatment assignment rules.
-                The method is designed to find rules that are stochastic, reflecting uncertainty in
-                estimation of an assignment rule and about its welfare performance. Our approach is to form
-                a prior distribution over assignment rules, not over data generating processes, and to
-                update this prior based upon an empirical welfare criterion, not likelihood. The social
-                planner then assigns treatment by drawing a policy from the resulting posterior. We show
-                analytically a welfare-optimal way of updating the prior using empirical welfare; this
-                posterior is not feasible to compute, so we propose a variational Bayes approximation for
-                the optimal posterior. We characterise the welfare regret convergence of the assignment
-                rule based upon this variational Bayes approximation, showing that it converges to zero at
-                a rate of <span class="nowrap">ln(<var>n</var>)/√<var>n</var></span>. We apply our methods to
-                experimental data from the Job Training Partnership Act Study to illustrate the
-                implementation of our methods.
-              </p>
-            </div>
           </div>
         </article>
       </section>

@@ -6,7 +6,7 @@ Personal website of Hugo Lopez: one hand-written page with no build step.
 
 - `index.html`: all the content
 - `assets/site.css`: styling
-- `assets/site.js`: opens and closes abstracts, and loads analytics on the live site only
+- `assets/site.js`: loads analytics, on the live site only; the page itself needs no script
 - `files/`: CV and papers
 - `images/hugo-lopez.jpg`: portrait
 - `404.html`: the "page not found" page
@@ -24,7 +24,7 @@ Then open http://localhost:4000.
 ## Common edits
 
 - **Update the CV:** replace `files/Hugo_Lopez_CV.pdf`, keeping the file name.
-- **Add a paper:** copy an `<article class="paper">` block in `index.html`, give it a new `id`, and make the Abstract button's `aria-controls` match the `id` of its abstract.
+- **Add a paper:** copy an `<article class="paper">` block in `index.html` and change its title, coauthors and links. Nothing else needs to match up. In text, write `&amp;` for `&` and `&lt;` for `<`.
 
 ## Publishing
 

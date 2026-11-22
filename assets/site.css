@@ -11,7 +11,7 @@
 
 :root {
   --bg: #151412;
-  --surface: #1f1d1a;           /* abstract panels */
+  --surface: #1f1d1a;           /* behind the photo while it loads */
   --text: #ece8df;
   --text-2: #c6c1b5;
   --muted: #9c968a;
@@ -71,7 +71,7 @@ a {
   color: var(--on-accent);
 }
 
-/* Keeps a short run, such as a page range or a formula, on one line. */
+/* Keeps a short run, such as a page range, on one line. */
 .nowrap {
   white-space: nowrap;
 }
@@ -112,6 +112,14 @@ a {
   position: sticky;
   top: 4.5rem;
   align-self: start;
+}
+
+/* In a short window the pinned sidebar is taller than the screen and its lower
+   part (email, CV button) is cut off, so there it scrolls with the page. */
+@media (max-height: 36rem) {
+  .sidebar {
+    position: static;
+  }
 }
 
 .portrait {
@@ -215,10 +223,6 @@ a {
 
 /* ---------- Papers ---------- */
 
-.paper {
-  scroll-margin-top: 2rem;
-}
-
 .paper + .paper {
   margin-top: 2.25rem;
 }
@@ -252,109 +256,24 @@ a {
   text-decoration-color: currentColor;
 }
 
-/* Under each paper: a row of links to its versions, then the Abstract button
-   on a row of its own. */
-.paper-links,
-.toggle {
-  font-size: 0.84375rem;
-  font-weight: 600;
-  line-height: 1.6;
-}
-
+/* Under each paper: a row of links to its versions. */
 .paper-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.4rem 1.35rem;
   margin-top: 0.8rem;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .paper-links a {
   text-decoration: none;
 }
 
-.paper-links a:hover,
-.toggle:hover {
+.paper-links a:hover {
   text-decoration: underline;
-}
-
-/* The Abstract button only appears when scripts run; without them the
-   abstracts are simply shown. */
-.toggle {
-  display: none;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-  margin-top: 0.45rem;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--accent);
-  text-underline-offset: 0.18em;
-  cursor: pointer;
-}
-
-.js .toggle {
-  display: flex;
-}
-
-.toggle::before {
-  content: "";
-  width: 0.42em;
-  height: 0.42em;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(-45deg);
-  transition: transform 0.15s ease;
-}
-
-.toggle[aria-expanded="true"]::before {
-  transform: translateY(-0.12em) rotate(45deg);
-}
-
-/* The abstract slides open and shut. The outer box animates between zero
-   height and its natural height; the inner box clips the text while it moves.
-   Without scripts the abstract is simply shown. */
-.abstract {
-  display: grid;
-  grid-template-rows: 1fr;
-}
-
-.abstract-body {
-  min-height: 0;
-  overflow: hidden;
-}
-
-.abstract p {
-  margin: 0.95rem 0 0;
-  padding: 1rem 1.2rem;
-  border-radius: 0.5rem;
-  background: var(--surface);
-  color: var(--text-2);
-  font-size: 1rem;
-  line-height: 1.62;
-  text-wrap: pretty;
-}
-
-.js .abstract {
-  grid-template-rows: 0fr;
-  visibility: hidden; /* keeps a closed abstract out of search-in-page and screen readers */
-  transition: grid-template-rows 0.32s ease, visibility 0s linear 0.32s;
-}
-
-.js .abstract-body {
-  opacity: 0;
-  transition: opacity 0.32s ease;
-}
-
-.js .abstract.is-open {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  transition: grid-template-rows 0.32s ease, visibility 0s;
-}
-
-.js .abstract.is-open .abstract-body {
-  opacity: 1;
 }
 
 /* ---------- Narrow screens: sidebar becomes a compact header ---------- */
@@ -429,7 +348,7 @@ a {
   }
 }
 
-/* On paper the page is dark text on white, with every abstract shown. */
+/* On paper the page is dark text on white. */
 @media print {
   :root {
     --bg: #fff;
@@ -447,7 +366,6 @@ a {
     font-size: 11pt;
   }
 
-  .toggle,
   .skip-link {
     display: none !important;
   }
@@ -456,19 +374,6 @@ a {
     border-color: #000;
     background: none;
     color: #000;
-  }
-
-  .abstract p {
-    padding: 0;
-  }
-
-  .js .abstract {
-    grid-template-rows: 1fr;
-    visibility: visible;
-  }
-
-  .js .abstract-body {
-    opacity: 1;
   }
 
   .page {
