@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Page not found | Hugo Lopez</title>
+  <title>Hugo Lopez</title>
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#151412">
+
+  <!-- GitHub shows this file for any address that does not exist on the site.
+       It sends the visitor straight to the home page. "replace" keeps the dead
+       address out of the browser history, so the Back button still works. -->
+  <script>window.location.replace('/');</script>
+  <meta http-equiv="refresh" content="0; url=/">
 
   <!-- Addresses start with "/" here because this page can be shown at any address. -->
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
@@ -20,12 +26,8 @@
       padding: 6rem 1.5rem;
     }
 
-    .not-found .name {
-      margin-top: 0;
-    }
-
     .not-found .lead {
-      margin: 1rem 0 2rem;
+      margin: 0 0 2rem;
       color: var(--text-2);
     }
 
@@ -36,10 +38,10 @@
 </head>
 
 <body>
+  <!-- Only seen if the browser blocks the automatic move above. -->
   <main class="not-found">
-    <h1 class="name">Page not found</h1>
-    <p class="lead">This page has moved or no longer exists.</p>
-    <a class="button" href="/">Go to Hugo Lopez's home page</a>
+    <p class="lead">Taking you to Hugo Lopez's home page.</p>
+    <a class="button" href="/">Go to the home page</a>
   </main>
 </body>
 </html>
