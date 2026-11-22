@@ -12,7 +12,6 @@ The website is everything inside `docs/`. GitHub Pages publishes that folder onl
 - `docs/files/`: CV and papers
 - `docs/images/hugo-lopez.jpg`: portrait
 - `docs/404.html`: sends any address that does not exist to the home page
-- `docs/research/`, `docs/teaching/`, `docs/about/`: forward the old site's addresses to the home page
 - `docs/.nojekyll`: tells GitHub Pages to serve the files as they are
 
 ## Preview
